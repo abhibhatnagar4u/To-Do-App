@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}To-Do List | Edit Page! {% endblock %}
+
+{% block content %} 
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <title>Edit-Page:To Do List's App using Django-Framework(Python)</title>
+ <meta name="description" content="This is the Edit-Page in 'To Do List App' using Django-Framework(Python) developed by Abhishek Bhatnagar.">
+ <meta name="keywords" content="Python, Django Framework, Dynamic Web-App, To Do List's">
+</head>
+
+<form class="form-inline my-2 my-lg-0" method="POST" >
+	{% csrf_token %}
+<input class="form-control me-2" type="search" placeholder="{{ item.item }}" aria-label="Search"
+name="item" value="{{ item.item }}" >
+<button class="btn btn-outline-secondary" type="submit" >Edit Item</button>
+</form>
+	
+
+{% endblock %} 
